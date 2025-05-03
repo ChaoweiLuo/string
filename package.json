@@ -1,0 +1,25 @@
+{
+  "name": "@luoga/string",
+  "version": "1.0.0",
+  "description": "跨平台命令行工具库",
+  "main": "src/cli.js",
+  "bin": {
+    "string": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "keywords": ["cli", "commander", "cross-platform"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "chalk": "^5.3.0",
+    "cross-spawn": "^7.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.56.0"
+  }
+}
