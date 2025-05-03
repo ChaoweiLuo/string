@@ -39,7 +39,8 @@ module.exports = (program) => {
             key: options.publicKey,
             padding: crypto.constants.RSA_PKCS1_OAEP_PADDING
           }, Buffer.from(data));
-          console.log(encrypted.toString('base64'));
+          console.log('encrypted:', encrypted.toString('base64'));
+          process.stdin.destroy();
         }
 
         if (options.decrypt) {
@@ -51,6 +52,7 @@ module.exports = (program) => {
             padding: crypto.constants.RSA_PKCS1_OAEP_PADDING
           }, Buffer.from(data, 'base64'));
           console.log(decrypted.toString());
+          process.stdin.destroy();
         }
       } catch (error) {
         console.error(chalk.red(`错误：${error.message}`));
